@@ -5,9 +5,10 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TradeModule } from './system/trade/trade.module';
 import { UserModule } from './system/user/user/user.module';
+import { UsersModule } from './system/users/users.module';
 
 @Module({
-  imports: [UserModule,TradeModule, TypeOrmModule.forRoot({
+  imports: [UserModule,TradeModule,UsersModule, TypeOrmModule.forRoot({
     type: 'mysql',
     host: '8.137.104.185',
     port: 3306,
